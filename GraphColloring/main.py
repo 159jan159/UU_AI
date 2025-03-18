@@ -38,25 +38,31 @@ def random_coloring(G: nx.Graph, k: int) -> List[int]:
 
 def color(G: nx.Graph, k: int, steps: int) -> Tuple[List[int], bool]:
     """
-    Pokusí se najít validní obarvení pomocí k barev
-    pomocí lokálního prohledávání s kombinací náhodné procházky a hill climbing.
+    Lokální prohledávání se simulovaným žíháním (snižující se náhodnost).
     """
-    # Inicializace náhodného obarvení
     col = random_coloring(G, k)
     current_cost = cost(G, col)
+
+    initial_temp = 0.3  # počáteční pravděpodobnost náhodného kroku
+    final_temp = 0.01   # konečná minimální pravděpodobnost
 
     for step in range(steps):
         if current_cost == 0:
             print(f"Validní obarvení nalezeno ve {step}. kroku")
             return col, True
 
-        # Vyber náhodný vrchol s konfliktem
-        conflict_nodes = [u for u, v in G.edges() if col[u] == col[v]]
-        if not conflict_nodes:
-            break
-        node = random.choice(conflict_nodes)
+        # Lineární ochlazování
+        temperature = initial_temp - ((initial_temp - final_temp) * (step / steps))
+        temperature = max(temperature, final_temp)
 
-        # Zkus změnit barvu na jinou
+        # Vyber náhodný konflikt
+        conflict_edges = [(u, v) for u, v in G.edges() if col[u] == col[v]]
+        if not conflict_edges:
+            break
+        u, v = random.choice(conflict_edges)
+        node = random.choice([u, v])
+
+        # Hledání nejlepší barvy pro snížení konfliktů
         best_color = col[node]
         min_cost = current_cost
         for new_color in range(k):
@@ -70,14 +76,13 @@ def color(G: nx.Graph, k: int, steps: int) -> Tuple[List[int], bool]:
                 best_color = new_color
             col[node] = old_color  # revert
 
-        # Hill climbing krok nebo náhodný krok
-        if min_cost < current_cost or random.random() < 0.1:  # občasný random krok (simulované žíhání)
-            col[node] = best_color
-            current_cost = min_cost
-        else:
-            # náhodný krok - změň barvu libovolně
-            col[node] = random.randint(0, k - 1)
+        # Rozhodnutí: přijmout lepší nebo náhodně zhoršit
+        if min_cost < current_cost or random.random() < temperature:
+            col[node] = best_color if min_cost < current_cost else random.randint(0, k - 1)
             current_cost = cost(G, col)
+
+        if step % (steps // 10) == 0:
+            print(f"Krok {step}/{steps}, konflikty: {current_cost}, temp: {temperature:.4f}")
 
     print(f"Počet konfliktů po {steps} krocích: {current_cost}")
     return col, current_cost == 0
@@ -97,7 +102,7 @@ if __name__ == "__main__":
     nx.draw(G, pos)
     plt.show()
 
-    k = 5
+    k = 25
     steps = 100000
     coloring, success = color(G, k, steps)
 

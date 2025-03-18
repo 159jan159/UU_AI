@@ -92,7 +92,7 @@ if __name__ == "__main__":
     G = nx.Graph()
     G = readdimacs('dsjc125.9.col.txt')
 
-    k = 45
+    k = 44
     steps = 100000
     coloring, success, time = color(G, k, steps)
 

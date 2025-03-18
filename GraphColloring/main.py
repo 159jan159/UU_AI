@@ -1,6 +1,6 @@
 import networkx as nx
 import matplotlib.pyplot as plt
-import matplotlib
+import time
 import random
 from typing import List, Tuple
 
@@ -36,7 +36,8 @@ def random_coloring(G: nx.Graph, k: int) -> List[int]:
     """Vytvoří náhodné obarvení."""
     return [random.randint(0, k - 1) for _ in range(G.number_of_nodes())]
 
-def color(G: nx.Graph, k: int, steps: int) -> Tuple[List[int], bool]:
+def color(G: nx.Graph, k: int, steps: int) -> Tuple[List[int], bool, float]:
+    start_time = time.time()
     """
     Lokální prohledávání se simulovaným žíháním (snižující se náhodnost).
     """
@@ -49,7 +50,7 @@ def color(G: nx.Graph, k: int, steps: int) -> Tuple[List[int], bool]:
     for step in range(steps):
         if current_cost == 0:
             print(f"Validní obarvení nalezeno ve {step}. kroku")
-            return col, True
+            return col, True, time.time() - start_time
 
         # Lineární ochlazování
         temperature = initial_temp - ((initial_temp - final_temp) * (step / steps))
@@ -82,31 +83,22 @@ def color(G: nx.Graph, k: int, steps: int) -> Tuple[List[int], bool]:
             current_cost = cost(G, col)
 
         if step % (steps // 10) == 0:
-            print(f"Krok {step}/{steps}, konflikty: {current_cost}, temp: {temperature:.4f}")
+            print(f"Krok {step}/{steps}, konflikty: {current_cost}, temp: {temperature:.4f}, čas: {time.time() - start_time:.2f}s")
 
     print(f"Počet konfliktů po {steps} krocích: {current_cost}")
     return col, current_cost == 0
 
 if __name__ == "__main__":
-    # Např.: G = load_dimacs_col("dsjc125.9.col")
-    # Pro testování menšího grafu
-
     G = nx.Graph()
     G = readdimacs('dsjc125.9.col.txt')
-    #G = readdimacs('test.txt')
 
-    #G = nx.erdos_renyi_graph(15, 0.2)
-
-    pos = nx.circular_layout(G)
-
-    nx.draw(G, pos)
-    plt.show()
-
-    k = 25
+    k = 45
     steps = 100000
-    coloring, success = color(G, k, steps)
+    coloring, success, time = color(G, k, steps)
 
     print("Úspěšné obarvení:", success)
     print("Validita:", iscoloring(G, coloring))
     print("Barvy:", coloring)
+    print("Počet barev:", len(set(coloring)))
+    print("Čas:", time)
 

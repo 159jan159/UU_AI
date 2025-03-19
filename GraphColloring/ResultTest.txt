@@ -1,0 +1,181 @@
+Krok 0/100000, konflikty: 0, temp: 0.8000, čas: 0.00s
+Validní obarvení nalezeno ve 1. kroku
+Úspěšné obarvení: True
+Validita: True
+Barvy: [0, 1, 4, 2, 0]
+Počet barev: 4
+Čas: 3.981590270996094e-05
+Krok 0/100000, konflikty: 1, temp: 0.8000, čas: 0.00s
+Validní obarvení nalezeno ve 2. kroku
+Úspěšné obarvení: True
+Validita: True
+Barvy: [3, 0, 0, 1, 2]
+Počet barev: 4
+Čas: 2.3126602172851562e-05
+Krok 0/100000, konflikty: 1, temp: 0.8000, čas: 0.00s
+Validní obarvení nalezeno ve 2. kroku
+Úspěšné obarvení: True
+Validita: True
+Barvy: [0, 2, 2, 1, 0]
+Počet barev: 3
+Čas: 1.6927719116210938e-05
+Krok 0/100000, konflikty: 3, temp: 0.8000, čas: 0.00s
+Krok 10000/100000, konflikty: 1, temp: 0.7210, čas: 0.04s
+Krok 20000/100000, konflikty: 1, temp: 0.6420, čas: 0.08s
+Krok 30000/100000, konflikty: 1, temp: 0.5630, čas: 0.11s
+Krok 40000/100000, konflikty: 3, temp: 0.4840, čas: 0.15s
+Krok 50000/100000, konflikty: 1, temp: 0.4050, čas: 0.19s
+Krok 60000/100000, konflikty: 1, temp: 0.3260, čas: 0.22s
+Krok 70000/100000, konflikty: 1, temp: 0.2470, čas: 0.25s
+Krok 80000/100000, konflikty: 1, temp: 0.1680, čas: 0.28s
+Krok 90000/100000, konflikty: 1, temp: 0.0890, čas: 0.32s
+Počet konfliktů po 100000 krocích: 1
+Úspěšné obarvení: False
+Validita: False
+Barvy: [0, 1, 1, 0, 0]
+Počet barev: 2
+Čas: 0.34450602531433105
+Krok 0/100000, konflikty: 2, temp: 0.8000, čas: 0.00s
+Krok 10000/100000, konflikty: 1, temp: 0.7210, čas: 0.04s
+Krok 20000/100000, konflikty: 1, temp: 0.6420, čas: 0.08s
+Krok 30000/100000, konflikty: 1, temp: 0.5630, čas: 0.12s
+Krok 40000/100000, konflikty: 1, temp: 0.4840, čas: 0.15s
+Krok 50000/100000, konflikty: 4, temp: 0.4050, čas: 0.19s
+Krok 60000/100000, konflikty: 1, temp: 0.3260, čas: 0.22s
+Krok 70000/100000, konflikty: 1, temp: 0.2470, čas: 0.25s
+Krok 80000/100000, konflikty: 2, temp: 0.1680, čas: 0.29s
+Krok 90000/100000, konflikty: 1, temp: 0.0890, čas: 0.32s
+Počet konfliktů po 100000 krocích: 1
+Úspěšné obarvení: False
+Validita: False
+Barvy: [0, 1, 1, 0, 0]
+Počet barev: 2
+Čas: 0.34586501121520996
+Krok 0/100000, konflikty: 3, temp: 0.8000, čas: 0.00s
+Krok 10000/100000, konflikty: 3, temp: 0.7210, čas: 0.04s
+Krok 20000/100000, konflikty: 3, temp: 0.6420, čas: 0.08s
+Krok 30000/100000, konflikty: 2, temp: 0.5630, čas: 0.11s
+Krok 40000/100000, konflikty: 1, temp: 0.4840, čas: 0.15s
+Krok 50000/100000, konflikty: 1, temp: 0.4050, čas: 0.19s
+Krok 60000/100000, konflikty: 1, temp: 0.3260, čas: 0.22s
+Krok 70000/100000, konflikty: 1, temp: 0.2470, čas: 0.25s
+Krok 80000/100000, konflikty: 1, temp: 0.1680, čas: 0.29s
+Krok 90000/100000, konflikty: 1, temp: 0.0890, čas: 0.32s
+Počet konfliktů po 100000 krocích: 1
+Úspěšné obarvení: False
+Validita: False
+Barvy: [0, 1, 1, 0, 0]
+Počet barev: 2
+Čas: 0.3451657295227051
+Krok 0/100000, konflikty: 2, temp: 0.8000, čas: 0.00s
+Krok 10000/100000, konflikty: 2, temp: 0.7210, čas: 0.04s
+Krok 20000/100000, konflikty: 2, temp: 0.6420, čas: 0.08s
+Krok 30000/100000, konflikty: 1, temp: 0.5630, čas: 0.11s
+Krok 40000/100000, konflikty: 1, temp: 0.4840, čas: 0.15s
+Krok 50000/100000, konflikty: 1, temp: 0.4050, čas: 0.19s
+Krok 60000/100000, konflikty: 1, temp: 0.3260, čas: 0.22s
+Krok 70000/100000, konflikty: 1, temp: 0.2470, čas: 0.25s
+Krok 80000/100000, konflikty: 1, temp: 0.1680, čas: 0.29s
+Krok 90000/100000, konflikty: 2, temp: 0.0890, čas: 0.32s
+Počet konfliktů po 100000 krocích: 1
+Úspěšné obarvení: False
+Validita: False
+Barvy: [1, 0, 0, 1, 1]
+Počet barev: 2
+Čas: 0.34511375427246094
+Krok 0/100000, konflikty: 4, temp: 0.8000, čas: 0.00s
+Krok 10000/100000, konflikty: 1, temp: 0.7210, čas: 0.04s
+Krok 20000/100000, konflikty: 1, temp: 0.6420, čas: 0.08s
+Krok 30000/100000, konflikty: 1, temp: 0.5630, čas: 0.11s
+Krok 40000/100000, konflikty: 1, temp: 0.4840, čas: 0.15s
+Krok 50000/100000, konflikty: 2, temp: 0.4050, čas: 0.19s
+Krok 60000/100000, konflikty: 1, temp: 0.3260, čas: 0.22s
+Krok 70000/100000, konflikty: 2, temp: 0.2470, čas: 0.25s
+Krok 80000/100000, konflikty: 1, temp: 0.1680, čas: 0.29s
+Krok 90000/100000, konflikty: 1, temp: 0.0890, čas: 0.32s
+Počet konfliktů po 100000 krocích: 1
+Úspěšné obarvení: False
+Validita: False
+Barvy: [0, 1, 1, 0, 0]
+Počet barev: 2
+Čas: 0.34511590003967285
+Krok 0/100000, konflikty: 4, temp: 0.8000, čas: 0.00s
+Krok 10000/100000, konflikty: 1, temp: 0.7210, čas: 0.04s
+Krok 20000/100000, konflikty: 2, temp: 0.6420, čas: 0.08s
+Krok 30000/100000, konflikty: 1, temp: 0.5630, čas: 0.11s
+Krok 40000/100000, konflikty: 1, temp: 0.4840, čas: 0.15s
+Krok 50000/100000, konflikty: 1, temp: 0.4050, čas: 0.19s
+Krok 60000/100000, konflikty: 1, temp: 0.3260, čas: 0.22s
+Krok 70000/100000, konflikty: 1, temp: 0.2470, čas: 0.25s
+Krok 80000/100000, konflikty: 1, temp: 0.1680, čas: 0.29s
+Krok 90000/100000, konflikty: 1, temp: 0.0890, čas: 0.32s
+Počet konfliktů po 100000 krocích: 1
+Úspěšné obarvení: False
+Validita: False
+Barvy: [0, 1, 1, 0, 0]
+Počet barev: 2
+Čas: 0.3448648452758789
+Krok 0/100000, konflikty: 2, temp: 0.8000, čas: 0.00s
+Krok 10000/100000, konflikty: 3, temp: 0.7210, čas: 0.04s
+Krok 20000/100000, konflikty: 1, temp: 0.6420, čas: 0.08s
+Krok 30000/100000, konflikty: 2, temp: 0.5630, čas: 0.11s
+Krok 40000/100000, konflikty: 1, temp: 0.4840, čas: 0.15s
+Krok 50000/100000, konflikty: 1, temp: 0.4050, čas: 0.19s
+Krok 60000/100000, konflikty: 2, temp: 0.3260, čas: 0.22s
+Krok 70000/100000, konflikty: 1, temp: 0.2470, čas: 0.25s
+Krok 80000/100000, konflikty: 1, temp: 0.1680, čas: 0.29s
+Krok 90000/100000, konflikty: 1, temp: 0.0890, čas: 0.32s
+Počet konfliktů po 100000 krocích: 1
+Úspěšné obarvení: False
+Validita: False
+Barvy: [1, 0, 0, 1, 1]
+Počet barev: 2
+Čas: 0.3453550338745117
+Krok 0/100000, konflikty: 2, temp: 0.8000, čas: 0.00s
+Krok 10000/100000, konflikty: 1, temp: 0.7210, čas: 0.04s
+Krok 20000/100000, konflikty: 3, temp: 0.6420, čas: 0.08s
+Krok 30000/100000, konflikty: 2, temp: 0.5630, čas: 0.12s
+Krok 40000/100000, konflikty: 1, temp: 0.4840, čas: 0.15s
+Krok 50000/100000, konflikty: 1, temp: 0.4050, čas: 0.19s
+Krok 60000/100000, konflikty: 2, temp: 0.3260, čas: 0.22s
+Krok 70000/100000, konflikty: 1, temp: 0.2470, čas: 0.26s
+Krok 80000/100000, konflikty: 1, temp: 0.1680, čas: 0.29s
+Krok 90000/100000, konflikty: 1, temp: 0.0890, čas: 0.32s
+Počet konfliktů po 100000 krocích: 1
+Úspěšné obarvení: False
+Validita: False
+Barvy: [1, 0, 0, 1, 1]
+Počet barev: 2
+Čas: 0.34676599502563477
+Krok 0/100000, konflikty: 3, temp: 0.8000, čas: 0.00s
+Krok 10000/100000, konflikty: 1, temp: 0.7210, čas: 0.04s
+Krok 20000/100000, konflikty: 3, temp: 0.6420, čas: 0.08s
+Krok 30000/100000, konflikty: 1, temp: 0.5630, čas: 0.11s
+Krok 40000/100000, konflikty: 2, temp: 0.4840, čas: 0.15s
+Krok 50000/100000, konflikty: 2, temp: 0.4050, čas: 0.19s
+Krok 60000/100000, konflikty: 1, temp: 0.3260, čas: 0.22s
+Krok 70000/100000, konflikty: 1, temp: 0.2470, čas: 0.25s
+Krok 80000/100000, konflikty: 1, temp: 0.1680, čas: 0.28s
+Krok 90000/100000, konflikty: 1, temp: 0.0890, čas: 0.32s
+Počet konfliktů po 100000 krocích: 1
+Úspěšné obarvení: False
+Validita: False
+Barvy: [0, 1, 1, 0, 0]
+Počet barev: 2
+Čas: 0.34479212760925293
+Krok 0/100000, konflikty: 2, temp: 0.8000, čas: 0.00s
+Krok 10000/100000, konflikty: 3, temp: 0.7210, čas: 0.04s
+Krok 20000/100000, konflikty: 3, temp: 0.6420, čas: 0.08s
+Krok 30000/100000, konflikty: 1, temp: 0.5630, čas: 0.11s
+Krok 40000/100000, konflikty: 1, temp: 0.4840, čas: 0.15s
+Krok 50000/100000, konflikty: 1, temp: 0.4050, čas: 0.19s
+Krok 60000/100000, konflikty: 2, temp: 0.3260, čas: 0.22s
+Krok 70000/100000, konflikty: 1, temp: 0.2470, čas: 0.25s
+Krok 80000/100000, konflikty: 1, temp: 0.1680, čas: 0.29s
+Krok 90000/100000, konflikty: 1, temp: 0.0890, čas: 0.32s
+Počet konfliktů po 100000 krocích: 1
+Úspěšné obarvení: False
+Validita: False
+Barvy: [0, 1, 1, 0, 0]
+Počet barev: 2
+Čas: 0.3458681106567383

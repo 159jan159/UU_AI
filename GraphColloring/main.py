@@ -1,5 +1,4 @@
 import networkx as nx
-import matplotlib.pyplot as plt
 import time
 import random
 from typing import List, Tuple
@@ -18,14 +17,14 @@ def readdimacs(filename):
 
 
 def iscoloring(G: nx.Graph, col: List[int]) -> bool:
-    """Ověří, zda je obarvení grafu G platné."""
+    #je obarvení validní
     for u, v in G.edges():
         if col[u] == col[v]:
             return False
     return True
 
 def cost(G: nx.Graph, col: List[int]) -> int:
-    """Spočítá počet konfliktů v daném obarvení."""
+    #počet konfliktů
     conflicts = 0
     for u, v in G.edges():
         if col[u] == col[v]:
@@ -33,14 +32,12 @@ def cost(G: nx.Graph, col: List[int]) -> int:
     return conflicts
 
 def random_coloring(G: nx.Graph, k: int) -> List[int]:
-    """Vytvoří náhodné obarvení."""
+    #random obarvení
     return [random.randint(0, k - 1) for _ in range(G.number_of_nodes())]
 
 def color(G: nx.Graph, k: int, steps: int) -> Tuple[List[int], bool, float]:
     start_time = time.time()
-    """
-    Lokální prohledávání se simulovaným žíháním (snižující se náhodnost).
-    """
+    #lokální prohledávání s ochlazováním
     col = random_coloring(G, k)
     current_cost = cost(G, col)
 
@@ -66,7 +63,7 @@ def color(G: nx.Graph, k: int, steps: int) -> Tuple[List[int], bool, float]:
         # Hledání nejlepší barvy pro snížení konfliktů
         best_color = col[node]
         min_cost = current_cost
-        for new_color in range(k):
+        for new_color in range(k): #projít všechny barvy
             if new_color == col[node]:
                 continue
             old_color = col[node]
@@ -86,19 +83,39 @@ def color(G: nx.Graph, k: int, steps: int) -> Tuple[List[int], bool, float]:
             print(f"Krok {step}/{steps}, konflikty: {current_cost}, temp: {temperature:.4f}, čas: {time.time() - start_time:.2f}s")
 
     print(f"Počet konfliktů po {steps} krocích: {current_cost}")
-    return col, current_cost == 0
+    return col, current_cost == 0, time.time() - start_time
+
+def findLowestColour(noColor: int, maxRunsPerColor: int, Gx: nx.Graph ):
+    run = True
+    while run:
+        for i in range(maxRunsPerColor):
+
+            steps = 100000
+
+            coloring, success, time = color(Gx, noColor, steps)
+
+            print("Úspěšné obarvení:", success)
+            print("Validita:", iscoloring(Gx, coloring))
+            print("Barvy:", coloring)
+            print("Počet barev:", len(set(coloring)))
+            print("Čas:", time)
+
+            if(success):
+                noColor = noColor - 1
+                break
+        if(success == False):
+            run = False
+
 
 if __name__ == "__main__":
-    G = nx.Graph()
-    G = readdimacs('dsjc125.9.col.txt')
+    #Gx = readdimacs('dsjc125.9.col.txt')
 
-    k = 45
-    steps = 100000
-    coloring, success, time = color(G, k, steps)
+    Gx = readdimacs('test.txt')
 
-    print("Úspěšné obarvení:", success)
-    print("Validita:", iscoloring(G, coloring))
-    print("Barvy:", coloring)
-    print("Počet barev:", len(set(coloring)))
-    print("Čas:", time)
+
+    findLowestColour(5, 10, Gx)
+
+
+
+
 
